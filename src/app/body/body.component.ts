@@ -1,8 +1,7 @@
-import { Component } from '@angular/core';
-import { Alumnos } from '../models/alumnos';
-import { Personajes } from '../models/personaje-star-war';
+import { Component, OnInit } from '@angular/core';
 import { MiServicioService } from '../services/mi-servicio.service';
-
+import { Personajes } from '../models/personaje-star-war';
+import { response } from 'express';
 
 
 
@@ -11,12 +10,22 @@ import { MiServicioService } from '../services/mi-servicio.service';
   templateUrl: './body.component.html',
   styleUrls: ['./body.component.css']
 })
-export class BodyComponent {
+export class BodyComponent implements OnInit{
+
+	
+	persona: any= [];
 
 
-constructor(private MiServicioService: MiServicioService){
-this.MiServicioService
-}
+	constructor(public MiServicioService:MiServicioService){ }
+	
+	ngOnInit(): void{
+	  console.log("El componente se ha inicializado");
+	  this.MiServicioService.getPersonajes()
+	  .subscribe( (response: Personajes) => this.persona = response)(console.log("aqui estoy", Response));
+	   
+	}
+
+
 
 /* 
 alumnosArray: Alumnos[] = [
@@ -83,9 +92,7 @@ openOrEdit(alumnos: Alumnos){
      }
     
  } */
- ngOnInit() {
-    
-  }
+ 
 
 }
 
