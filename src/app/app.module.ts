@@ -17,7 +17,7 @@ import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StarwarModule } from './modulos/starwar.module'
 import { HttpClientModule } from '@angular/common/http';
-
+import { MiServicioService } from './services/mi-servicio.service';
 
 @NgModule({
   declarations: [
@@ -49,7 +49,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatMenuModule,
     MatToolbarModule,
   ],
-  providers: [],
+  providers: [MiServicioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

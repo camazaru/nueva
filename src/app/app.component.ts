@@ -1,7 +1,5 @@
-import { Component, Input } from '@angular/core';
-
-
-
+import { Component, Input, OnInit } from '@angular/core';
+import {MiServicioService} from '../app/services/mi-servicio.service'
 
 @Component({
   selector: 'app-root',
@@ -9,15 +7,17 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'primera-entrega-final';
-
-
-
-
- constructor(){
   
- }
+personajes:any;
 
+constructor(public personaje:MiServicioService){ }
 
+ngOnInit()
+{
+  this.personaje.getPersonajes().subscribe(
+    (r) => {this.personajes = r; console.log(r)},
+    (e) => {console.log(e)}
+  )
+}
 
 }

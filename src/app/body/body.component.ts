@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Alumnos } from '../models/alumnos';
-import { Personaje } from '../models/personaje-star-war';
+import { Personajes } from '../models/personaje-star-war';
 import { MiServicioService } from '../services/mi-servicio.service';
 
 
@@ -12,11 +12,10 @@ import { MiServicioService } from '../services/mi-servicio.service';
   styleUrls: ['./body.component.css']
 })
 export class BodyComponent {
- MiServicioService: any;
- Personaje: any;
 
-constructor(private datos: MiServicioService){
 
+constructor(private MiServicioService: MiServicioService){
+this.MiServicioService
 }
 
 /* 
@@ -85,7 +84,7 @@ openOrEdit(alumnos: Alumnos){
     
  } */
  ngOnInit() {
-    this.MiServicioService.getPersonaje().subscribe((Personaje: any) => (this.Personaje = Personaje));
+    
   }
 
 }

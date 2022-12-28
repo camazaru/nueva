@@ -4,9 +4,9 @@
 
 
 <div>
-  <ul class="list-group">
+  <ul class="list-group" *ngFor="let personaje of Personajes" >
     <li>
-        {{Personaje.name}} 
+       {{personaje.name}}
     </li>
   </ul>
 </div>
