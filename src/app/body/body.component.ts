@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Result } from '../models/personaje-star-war';
 import { MiServicioService } from '../services/mi-servicio.service';
-import { Personajes } from '../models/personaje-star-war';
-import { response } from 'express';
 
 
 
@@ -13,19 +12,25 @@ import { response } from 'express';
 export class BodyComponent implements OnInit{
 
 	
-	persona: any= [];
+	persona:any = [];
 
-
-	constructor(public MiServicioService:MiServicioService){ }
+	constructor(public miServicioService:MiServicioService){ }
 	
 	ngOnInit(): void{
-	  console.log("El componente se ha inicializado");
-	  this.MiServicioService.getPersonajes()
-	  .subscribe( (response: Personajes) => this.persona = response)(console.log("aqui estoy", Response));
-	   
+	  this.miServicioService.getPersonaje().subscribe(response=> {
+		this.persona=response;
+console.log("esto llega", this.persona)
+		
+	
+	})
+	 
+		
+	  }
+	 
+	  
 	}
 
-
+	
 
 /* 
 alumnosArray: Alumnos[] = [
@@ -94,5 +99,4 @@ openOrEdit(alumnos: Alumnos){
  } */
  
 
-}
 

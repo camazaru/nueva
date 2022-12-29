@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {MiServicioService} from '../app/services/mi-servicio.service'
 import { Observable } from 'rxjs';
-import {Personajes} from "./models/personaje-star-war"
+import {Result} from "./models/personaje-star-war"
 
 @Component({
   selector: 'app-root',

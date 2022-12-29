@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+import { Result } from '../models/personaje-star-war';
 
 
 
@@ -8,12 +9,13 @@ import { HttpClient } from "@angular/common/http";
 })
 export class MiServicioService {
 
- // private API_SERVER = "https://swapi.dev/api/people"
 
-  constructor(public http:HttpClient){ console.log('Servicio HTTP') }
+  constructor(private http:HttpClient){}
 
-getPersonajes():any{
-  return this.http.get('https://swapi.dev/api/people')
+getPersonaje(){
+  return this.http.get<Result[]>('https://swapi.dev/api/people/')
+
+  
 }
 
   }

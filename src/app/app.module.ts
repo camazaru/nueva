@@ -51,7 +51,7 @@ import { MiServicioService } from './services/mi-servicio.service';
     MatMenuModule,
     MatToolbarModule,
   ],
-  providers: [MiServicioService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
