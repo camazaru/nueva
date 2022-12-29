@@ -20,6 +20,8 @@ import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StarwarModule } from './modulos/starwar.module'
 import { HttpClientModule } from '@angular/common/http';
+import { ContadorComponent } from './head/contador/contador.component';
+
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { HttpClientModule } from '@angular/common/http';
     BodyComponent,
     HeadComponent,
     LateralComponent,
-    FooterComponent
+    FooterComponent,
+    ContadorComponent,
+    
     
   ],
   imports: [
