@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Result } from '../models/personaje-star-war';
 import { MiServicioService } from '../services/mi-servicio.service';
 
 
@@ -19,15 +18,14 @@ export class BodyComponent implements OnInit{
 	ngOnInit(): void{
 	  this.miServicioService.getPersonaje().subscribe(response=> {
 		this.persona=response;
-console.log("esto llega", this.persona)
-		
-	
-	})
+
+			})
 	 
-		
 	  }
+	
 	 
 	  
+
 	}
 
 	

@@ -1,8 +1,30 @@
 <div class="row mt-3 text-center">
-<h1 class=" ">Alumnos inscritos Bootcamp ANGULAR</h1>
+<h1 class=" ">Personajes StarWars</h1>
 </div>
 
 
+  <div class="row ">
+<mat-card class="example-card mx-auto mt-3" *ngFor="let pers of persona.results">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{pers.name}}</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://media.contentapi.ea.com/content/dam/star-wars-battlefront-2/images/2019/08/swbf2-refresh-hero-large-heroes-page-luke-skywalker-16x9-xl.jpg.adapt.crop1x1.320w.jpg">
+  <mat-card-content>
+    <p>
+      
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>EDITAR</button>
+    <button mat-button>
+    BORRAR</button>
+  </mat-card-actions>
+</mat-card>
+</div>
+
+<!-- 
 <div >
   <ul *ngFor="let pers of persona.results">
     <li>
@@ -10,7 +32,7 @@
     </li>
   </ul>
 </div>
-
+ -->
 
 <!-- 
 <div class="row">

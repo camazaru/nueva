@@ -7,6 +7,7 @@ import { MatSidenavModule } from  '@angular/material/sidenav';
 import { MatListModule } from  '@angular/material/list';
 import { MatButtonModule } from  '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu'
+import {MatCardModule} from '@angular/material/card';
 import { Observable } from 'rxjs';
 
 
@@ -42,7 +43,9 @@ import { MiServicioService } from './services/mi-servicio.service';
     BrowserAnimationsModule,
     FormsModule,
     StarwarModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule
+    
 
   ],
   exports: [

@@ -1,0 +1,8 @@
+.example-card {
+    max-width: 240px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://media.contentapi.ea.com/content/dam/star-wars-battlefront-2/images/2019/08/swbf2-refresh-hero-large-heroes-page-luke-skywalker-16x9-xl.jpg.adapt.crop1x1.320w.jpg');
+    background-size: cover;
+  }
