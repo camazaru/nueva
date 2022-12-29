@@ -8,7 +8,7 @@ import { MatListModule } from  '@angular/material/list';
 import { MatButtonModule } from  '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu'
 import {MatCardModule} from '@angular/material/card';
-import { Observable } from 'rxjs';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,7 +20,7 @@ import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StarwarModule } from './modulos/starwar.module'
 import { HttpClientModule } from '@angular/common/http';
-import { MiServicioService } from './services/mi-servicio.service';
+
 
 @NgModule({
   declarations: [
