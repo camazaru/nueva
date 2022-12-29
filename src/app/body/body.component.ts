@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { filter } from 'rxjs';
 import { MiServicioService } from '../services/mi-servicio.service';
 
 
@@ -8,26 +9,22 @@ import { MiServicioService } from '../services/mi-servicio.service';
   templateUrl: './body.component.html',
   styleUrls: ['./body.component.css']
 })
-export class BodyComponent implements OnInit{
+export class BodyComponent{
 
+	persona:any = []
 	
-	persona:any = [];
 
-	constructor(private miServicioService:MiServicioService){ }
+	constructor(private miServicioService:MiServicioService){ 
+		this.miServicioService.getPersonaje()
+		.subscribe(	response=> {
+			this.persona=response
+		})
+
+	}
 	
-	ngOnInit(): void{
-	  this.miServicioService.getPersonaje().subscribe(response=> {
-		this.persona=response;
-
-			})
+	
 	 
-	  }
-	
-	  OnDestroy(): void{
-
-	  }
-
-	  }
+}
 	  
 
 	
