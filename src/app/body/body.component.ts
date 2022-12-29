@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MiServicioService } from '../services/mi-servicio.service';
 
 
@@ -13,7 +13,7 @@ export class BodyComponent implements OnInit{
 	
 	persona:any = [];
 
-	constructor(public miServicioService:MiServicioService){ }
+	constructor(private miServicioService:MiServicioService){ }
 	
 	ngOnInit(): void{
 	  this.miServicioService.getPersonaje().subscribe(response=> {
@@ -23,10 +23,14 @@ export class BodyComponent implements OnInit{
 	 
 	  }
 	
-	 
+	  OnDestroy(): void{
+
+	  }
+
+	  }
 	  
 
-	}
+	
 
 	
 
